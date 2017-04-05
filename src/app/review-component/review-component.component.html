@@ -1,0 +1,72 @@
+<div class="row page-content-wrapper">
+    <h2>
+        <a [routerLink]="['/home']"><- Return</a>
+    </h2>
+</div>
+<div class="row page-content-wrapper">
+    <p><strong>Q3:</strong> You must review and comment on the code in this component, please view the code in the directory called <strong>/review-component/</strong>.</p>
+</div>
+<div class="row page-content-wrapper">
+    <div class="col-md-10 col-md-offset-1">
+        <div class="row">
+            <h3><strong>Customer List</strong></h3>
+        </div>
+        <div class="row">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <td>Unique ID</td>
+                        <td>Name</td>
+                        <td>Age</td>
+                        <td>Address</td>
+                        <td class="text-right">Actions</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let customer of currentCustomers">
+                        <td>
+                            {{ customer.uniqueId }}
+                        </td>
+                        <td>
+                            {{ customer.name }}
+                        </td>
+                        <td>
+                            {{ customer.age }}
+                        </td>
+                        <td>
+                            {{ customer.address }}
+                        </td>
+                        <td class="text-right">
+                            <button class="btn btn-success" (click)="remove(currentCustomers.indexOf(customer))">Remove</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" [(ngModel)]="newCustomerUniqueId" [placeholder]="'Unique ID'" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" [(ngModel)]="newCustomerName" [placeholder]="'Name'" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" [(ngModel)]="newCustomerAge" [placeholder]="'Name'" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <input type="text" class="form-control" [(ngModel)]="newCustomerAge" [placeholder]="'Name'" />
+                            </div>
+                        </td>
+                        <td>
+                            <button class="btn btn-warning" (click)="addCustomer({ uniqueId: newCustomerUniqueId, name: newCustomerName, age: newCustomerAge, address: newCustomerAddress })">Add</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

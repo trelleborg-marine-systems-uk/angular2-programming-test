@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <title><%= htmlWebpackPlugin.options.title %></title>
+
+    <meta name="description" content="<%= htmlWebpackPlugin.options.title %>" />
+
+    <% if (webpackConfig.htmlElements.headTags) { %>
+    <!-- Configured Head Tags  -->
+    <%= webpackConfig.htmlElements.headTags %>
+    <% } %>
+
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,700,700italic" />
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" integrity="sha256-fmMNkMcjSw3xcp9iuPnku/ryk9kaWgrEbfJfKmdZ45o=" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/app.css" />
+
+    <!-- base url -->
+    <base href="<%= htmlWebpackPlugin.options.metadata.baseUrl %>" />
+</head>
+<body>
+
+    <pt-app class="app-load">
+        <div class="vertical-center trelleborg-color">
+            <div class="app-load-body">
+                <div class="app-load-spinner"></div>
+                <p class="text-center">
+                    <img src="/assets/img/tms_logo.png" class="app-load-logo" alt="Trelleborg Marine Systems UK Ltd" /><br />
+                    LOADING&hellip;
+                </p>
+            </div>
+        </div>
+    </pt-app>
+
+    <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
+    <script type="text/javascript" src="/webpack-dev-server.js"></script>
+    <% } %>
+</body>
+</html>

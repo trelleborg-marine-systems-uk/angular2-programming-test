@@ -1,0 +1,10 @@
+.display-header {
+    font-weight: bold;
+    font-size: 2em;
+    border-bottom: solid 2px #2b669a;
+    margin-bottom: 10px;
+}
+
+.content-text {
+    font-size: 1.3em;
+}

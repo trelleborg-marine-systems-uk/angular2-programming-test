@@ -1,0 +1,90 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+    overflow: hidden;
+}
+
+/* Test CSS */
+.page-content-wrapper {
+    padding: 15px 10px;
+}
+
+/* Trelleborg Colours */
+.trelleborg-color {
+    color: #998242!important;
+    background-color: #393939!important;
+}
+
+.app-load {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.app-load-logo {
+    margin: 10px;
+}
+
+.app-load-body {
+    margin: 0 auto;
+}
+
+.no-padding {
+    padding: 0!important;
+}
+
+.no-margin {
+    margin: 0!important;
+}
+
+.no-border-radius {
+    border-radius: 0!important;
+}
+
+.vertical-center {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+}
+
+/* Loading Spinner */
+.app-load-spinner,
+.app-load-spinner:after {
+    border-radius: 50%;
+    width: 10em;
+    height: 10em;
+}
+.app-load-spinner {
+    margin: 60px auto;
+    font-size: 10px;
+    position: relative;
+    text-indent: -9999em;
+    border: 1.1em solid rgba(153, 130, 66, 0.2);
+    border-left-color: #998242;
+    transform: translateZ(0);
+    animation: load8 1.1s infinite linear;
+}
+
+@-webkit-keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes load8 {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
